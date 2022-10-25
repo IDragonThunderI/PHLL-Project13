@@ -27,6 +27,7 @@ int main()
 		cout << "\nГод рождения: ";
 		cin >> st[i].year;
 		cout << "\nОценки: ";
+
 		for (int j = 0; j < 3; j++)
 			cin >> st[i].bal[j];
 	}
