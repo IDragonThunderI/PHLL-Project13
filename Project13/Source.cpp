@@ -3,9 +3,6 @@ using namespace std;
 
 int main()
 {
-	system("chcp 1251");
-	system("cls");
-
 	struct Student
 	{
 		char name[30]; // ФИО
@@ -16,17 +13,17 @@ int main()
 	int n;
 	Student st[30]{}; // Описан массив структур
 
-	cout << "Введите количество студентов: ";
+	cout << "Enter numbers of students: ";
 	cin >> n;
 
 	// Ввод значений полей структуры
 	for (int i = 0; i < n; i++)
 	{
-		cout << "\nФИО: ";
+		cout << "\nFull name: ";
 		cin >> st[i].name;
-		cout << "\nГод рождения: ";
+		cout << "\nDate of birth: ";
 		cin >> st[i].year;
-		cout << "\nОценки: ";
+		cout << "\nGrades: ";
 		for (int j = 0; j < 3; j++)
 			cin >> st[i].bal[j];
 	}
@@ -37,7 +34,7 @@ int main()
 			if (st[i].name[0] > st[i + 1].name[0])
 				swap(st[i], st[i + 1]);
 
-	cout << "\nОтсортированный массив:" << endl;
+	cout << "\nSorted array:" << endl;
 	for (int i = 0; i < n; i++)
 	{
 		cout << "\n" << st[i].name << endl;
